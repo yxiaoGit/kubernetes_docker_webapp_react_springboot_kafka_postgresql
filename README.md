@@ -5,16 +5,16 @@ simulated the kubernetes, Ingress load balancer, docker deployment using Minikub
 
 🗺️ The Port Mapping BreakdownHere is a visual map of how a request moves through the system, 
   explaining why the numbers change:
-  
+  ```
          Browser ---> https://localhost (Port 443 / 80)
                              |
                              v
-                  [ Kubernetes Ingress ] (API Gateway)
+                   Kubernetes Ingress  (API Gateway)
                  /                      \
       Matches path: /                    Matches path: /api
                /                            \
               v                              v
-   React Frontend Service            Spring API Service 
+   React Frontend Service             Spring API Service 
     - Service Port: 80                 - Service Port: 8080
     - Target Port: 80                  - Target Port: 8080
 
@@ -22,3 +22,4 @@ simulated the kubernetes, Ingress load balancer, docker deployment using Minikub
               v                              v
       React Pod                       Spring API Pod 
      (Nginx Server on port 80)       (Tomcat Server on port 8080)
+```
