@@ -14,11 +14,11 @@ simulated the kubernetes, Ingress load balancer, docker deployment using Minikub
       Matches path: /                    Matches path: /api
                /                            \
               v                              v
-   [ React Frontend Service ]       [ Spring API Service ]
-   - Service Port: 80               - Service Port: 8080
-   - Target Port: 80                - Target Port: 8080
+   React Frontend Service            Spring API Service 
+    - Service Port: 80                 - Service Port: 8080
+    - Target Port: 80                  - Target Port: 8080
 
               |                              |
               v                              v
-     [ React Pod ]                  [ Spring API Pod ]
+      React Pod                       Spring API Pod 
      (Nginx Server on port 80)       (Tomcat Server on port 8080)
